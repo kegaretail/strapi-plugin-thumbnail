@@ -6,7 +6,7 @@ module.exports = {
 
     getThumbnail: async (ctx) => {
         const { thumbnail_key, image_id } = ctx.params;
-        const thumbnail = strapi.plugins['strapi-plugin-thumbnail'].services.thumbnail;
+        const thumbnail = strapi.plugins['thumbnail'].services.thumbnail;
 
         try {
             const file = await thumbnail.create(thumbnail_key, image_id);
