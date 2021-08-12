@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/:thumbnail_key/:image_id",
+      "handler": "Thumbnail.getThumbnail",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
