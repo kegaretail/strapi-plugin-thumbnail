@@ -24,7 +24,7 @@ npm run build --clean
 
 Add `config/thumbnails.js` where u can configurata witch thumbnails can be generated.
 
-```
+```javascript
 module.exports = ({ env }) => ({
 
     desktop: {
