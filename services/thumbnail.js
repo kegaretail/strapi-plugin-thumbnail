@@ -128,7 +128,7 @@ module.exports = {
             const thumb_full_path = thumb_path + '/' + thumb_name;
 
             if (fs.existsSync(thumb_full_path)) {
-                strapi.plugins['strapi-plugin-thumbnail'].services.thumbnail.create(thumbnail_key, _id, true);
+                strapi.plugins['thumbnail'].services.thumbnail.create(thumbnail_key, _id, true);
             }
         });
 
