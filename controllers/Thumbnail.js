@@ -15,7 +15,7 @@ module.exports = {
             ctx.response.set("content-type", file.mime);
             ctx.body = src;
 
-        } catch ({ status, error }) {
+        } catch ({ status=500, error }) {
             ctx.status(status);
             ctx.send(error);
         }
