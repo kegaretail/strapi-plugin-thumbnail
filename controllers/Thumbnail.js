@@ -16,8 +16,7 @@ module.exports = {
             ctx.body = src;
 
         } catch ({ status=500, error }) {
-            ctx.status(status);
-            ctx.send(error);
+            ctx.send(error, status);
         }
   
     },
