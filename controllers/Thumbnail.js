@@ -12,7 +12,8 @@ module.exports = {
             const file = await thumbnail.create(thumbnail_key, image_id);
 
             const src = fs.createReadStream(file.path);
-            ctx.response.set("content-type", file.mime);
+            ctx.response.set('content-type', file.mime);
+            ctx.response.set('cache-control', 'max-age=0');
             ctx.body = src;
 
         } catch ({ status=500, error }) {
